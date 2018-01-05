@@ -1,0 +1,73 @@
+<!-- Support IE8+, Firefox 45+, Safari 9+, Opera -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ribbon</title>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .Ribbon-close {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      color: #fff;
+      line-height: 1;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+    /* высота указывается у Ribbon-inner */
+    .Ribbon {
+      font: normal 13px / 1.2 Arial, Helvetica, sans-serif;
+      position: relative;
+      width: 100%;
+      min-width: 230px;
+      background-color: #6d8086;
+      color: #fff;
+    }
+    .Ribbon-inner {
+      display: table;
+      border-spacing: 12px 0; /* расстояние м/у ячейками риббона, 1-е гориз, 2-е верт */
+      height: 40px; /* высота риббона */
+      margin: 0 auto;
+      padding-right: 20px;
+    }
+    .Ribbon-cell {
+      display: table-cell;
+    }
+    .Ribbon-cell + .Ribbon-cell {
+      margin-left: 10px;
+    }
+    .Ribbon-icon {
+      width: 30px;
+      height: 30px;
+    }
+    .Ribbon-inner.u-valignMiddle .Ribbon-cell {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<div class="Ribbon">
+  <div class="Ribbon-close">&times;</div>
+  <div class="Ribbon-inner u-valignMiddle">
+    <div class="Ribbon-cell">
+      <img class="Ribbon-icon" src="http://img-fotki.yandex.ru/get/6717/16969765.1ae/0_874f0_806648e2_orig.png" alt="">
+    </div>
+    <div class="Ribbon-cell">Воспользуйтесь предложением и закажите прямо сейчас. В подарок вы получите новую указку, две коробки передач и одну морковку по цене лимузина.</div>
+  </div>
+</div>
+</body>
+</html>
