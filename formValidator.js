@@ -64,15 +64,10 @@ function FormValidator(options) {
         isValid = field.checked;
         break;
       default:
-        // пробуем кастомный валидатор
         var validationHandler = options.customValidators && options.customValidators[type];
 
         isValid = validationHandler(field.value);
         break;
-      // todo: radio button валиден ли
-      // case 'radiogroup':
-      //   isValid = true;
-      //   break;
     }
     // debugger
 
